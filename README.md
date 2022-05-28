@@ -17,7 +17,7 @@ Corresponding： yangxuerui@tsinghua.edu.cn; lfj17@mails.tsinghua.edu.cn; sherki
 This file is a description of how the results presented in the manuscript were generated, including the datasets we used, how we downloaded and processed the raw datasets, the codes we used, et al.
 
 ## **Datasets**
-The datasets we used were all downloaded from [GEO](https://www.ncbi.nlm.nih.gov/gds) database. We all collected 26 datasets, containing more than 100 ribosome profiling samples and several iCLIP-seq samples. Please refer to [Table S1](https://github.com/sherkinglee/RocA/metadata/TableS1.xlsx) for the detailed information of all the collected datasets.
+The datasets we used were all downloaded from [GEO](https://www.ncbi.nlm.nih.gov/gds) database. We all collected 26 datasets, containing more than 100 ribosome profiling samples and several iCLIP-seq samples. Please refer to [Table S1](https://github.com/sherkinglee/RocA/blob/main/metadata/TableS1.xlsx) for the detailed information of all the collected datasets.
 
 The codes used for downloading all the datasets are:
 
@@ -83,7 +83,7 @@ OutputTranscriptInfo -c <RiboCode_annot/transcripts_cds.txt> -g <Homo_sapiens.GR
 ```
 
 ## **Pre-processing of ribosome profiling and Disome-seq data**
-All ribosome profiling and Disome-seq datasets were processed with a custom [**snakemake**](https://github.com/sherkinglee/RocA/scripts/Ribo-seq-snakemake.py) pipeline. Use GSE102720 as an example，run the snakemake file:
+All ribosome profiling and Disome-seq datasets were processed with a custom [**snakemake**](https://github.com/sherkinglee/RocA/blob/main/scripts/Ribo-seq-snakemake.py) pipeline. Use GSE102720 as an example，run the snakemake file:
 
 ```
 snakemake -s Ribo-seq-snakemake.py  --cluster "sbatch -p cmp -N 2 -n 8 -e Ribo.err -o Ribo.out " --jobs 61
@@ -94,7 +94,7 @@ snakemake -s Ribo-seq-snakemake.py  --cluster "sbatch -p cmp -N 2 -n 8 -e Ribo.e
 
 ## **Formal analyses**
 ### **Calculate polarity scores for each datasets**
-+ Set configure files ([GSE102720](https://github.com/sherkinglee/RocA/metadata/GSE102720_configure.txt) for example)
++ Set configure files ([GSE102720](https://github.com/sherkinglee/RocA/blob/main/metadata/GSE102720_configure.txt) for example)
 
 ```
 bamFiles        readLengths     Offsets bamLegends
@@ -148,11 +148,11 @@ df_new.to_csv('GSE102720_diff_polarity_dataframe.txt',sep="\t",index=False)
 
 ```
 
-**Finally, the difference of polarity scores from all datasets were merged. Please refer to [total_merged_diff_polarity_202102.txt](https://github.com/sherkinglee/RocA/data/total_merged_diff_polarity_202102.txt).**
+**Finally, the difference of polarity scores from all datasets were merged. Please refer to [total_merged_diff_polarity_202102.txt](https://github.com/sherkinglee/RocA/blob/main/data/total_merged_diff_polarity_202102.txt).**
 
 ## **Calculate RPKM for each datasets**
 
-+ use [GSE102720](https://github.com/sherkinglee/RocA/metadata/GSE102720_configure.txt) for example.
++ use [GSE102720](https://github.com/sherkinglee/RocA/blob/main/metadata/GSE102720_configure.txt) for example.
 ```
 workdir=`pwd`
 BamDir=$workdir/../07.STAR
@@ -189,11 +189,11 @@ print(df_new.shape)
 print(df_new.iloc[0:5,:])
 df_new.to_csv('GSE102720_diff_RPKM_dataframe.txt',sep="\t",index=False)
 ```
-**Finally, the RPKM of all transcripts from all datasets were merged. Please refer to [total_merged_cds_level_RPKM_202102.txt](https://github.com/sherkinglee/RocA/data/total_merged_cds_level_RPKM_202102.txt).**
+**Finally, the RPKM of all transcripts from all datasets were merged. Please refer to [total_merged_cds_level_RPKM_202102.txt](https://github.com/sherkinglee/RocA/blob/main/data/total_merged_cds_level_RPKM_202102.txt).**
 
 ## **Calculate Coverage for each datasets**
 
-+ Calculate coverage using [**RiboMiner**](https://github.com/xryanglab/RiboMiner), use [GSE102720](https://github.com/sherkinglee/RocA/metadata/GSE102720_configure.txt) for example. 
++ Calculate coverage using [**RiboMiner**](https://github.com/xryanglab/RiboMiner), use [GSE102720](https://github.com/sherkinglee/RocA/blob/main/metadata/GSE102720_configure.txt) for example. 
 
 ```
 workdir=`pwd`
@@ -212,7 +212,7 @@ mkdir -p $workdir/coverage
 RiboDensityAtEachPosition -c $trans_info -f $attribute -o $workdir/coverage/MA  -U codon
 ```
 
-**Finally, the coverage of all transcripts from all datasets were merged. Please refer to [total_merged_read_coverage_202102.txt](https://github.com/sherkinglee/RocA/data/total_merged_read_coverage_202102.txt).**
+**Finally, the coverage of all transcripts from all datasets were merged. Please refer to [total_merged_read_coverage_202102.txt](https://github.com/sherkinglee/RocA/blob/main/data/total_merged_read_coverage_202102.txt).**
 
 ----
 
@@ -220,7 +220,7 @@ RiboDensityAtEachPosition -c $trans_info -f $attribute -o $workdir/coverage/MA  
 
 ###**Figure 1A**
 
-+ all used data were deposited in [./data](https://github.com/sherkinglee/RocA/data/)
++ all used data were deposited in [./data](https://github.com/sherkinglee/RocA/blob/main/data/)
 
 ```
 TranslationRelatedConsitionPairs.txt
@@ -299,7 +299,7 @@ plt.savefig("../results/Figure 1A.pdf")
 
 ###**Figure 1B**
 
-+ set [configure](https://github.com/sherkinglee/RocA/metadata/GSE70211_configure.txt) file
++ set [configure](https://github.com/sherkinglee/RocA/blob/main/metadata/GSE70211_configure.txt) file
 
 ```
 bamFiles	readLengths	Offsets	bamLegends
@@ -310,7 +310,7 @@ bamFiles	readLengths	Offsets	bamLegends
 ../07.STAR/SRR2075929_STAR/SRR2075929.Aligned.toTranscriptome.out.sorted.bam	26,27,28,29	11,11,12,12	RocA-3
 ```
 
-All the bam files were generated via the [Ribo-seq analyses pipeline](https://github.com/sherkinglee/RocA/scripts/Ribo-seq-snakemake.py).
+All the bam files were generated via the [Ribo-seq analyses pipeline](https://github.com/sherkinglee/RocA/blob/main/scripts/Ribo-seq-snakemake.py).
 
 + Metagene via [RiboMiner](https://github.com/xryanglab/RiboMiner)
 
@@ -352,7 +352,7 @@ RiboDensityAtEachPosition -c $trans_info -f $attribute -o $workdir/coverage/MA  
 ```
 
 
-+ Statistic read density at the first 75 codons via [ProcessCodonDensityAtEachPosition.py](https://github.com/sherkinglee/RocA/scripts/ProcessCodonDensityAtEachPosition.py) script.
++ Statistic read density at the first 75 codons via [ProcessCodonDensityAtEachPosition.py](https://github.com/sherkinglee/RocA/blob/main/scripts/ProcessCodonDensityAtEachPosition.py) script.
 
 ```
 ## the first 75    
@@ -369,7 +369,7 @@ $ python ProcessCodonDensityAtEachPosition.py -i MA_RocA-003_cds_codon_density.t
 $ python ProcessCodonDensityAtEachPosition.py -i MA_RocA-03_cds_codon_density.txt  -o RocA03_all.txt
 $ python ProcessCodonDensityAtEachPosition.py -i MA_RocA-3_cds_codon_density.txt -o RocA3_all.txt
 ```
-+ Statistics of ratio of the first 75 codons vs the whole CDS region,via [RiboDensityAtEachPosition.Rmd](https://github.com/sherkinglee/RocA/scripts/RiboDensityAtEachPosition.Rmd).
++ Statistics of ratio of the first 75 codons vs the whole CDS region,via [RiboDensityAtEachPosition.Rmd](https://github.com/sherkinglee/RocA/blob/main/scripts/RiboDensityAtEachPosition.Rmd).
 
 ```
 ## Open Rstudio and do it in R platform
@@ -450,7 +450,7 @@ graph2ppt(x=pp,"../results/Figure 1C.ppt")
 
 ###**Figure 1D**
 
-+ DE analysis via [DEseq2.R](https://github.com/sherkinglee/RocA/scripts/DESeq2.R)
++ DE analysis via [DEseq2.R](https://github.com/sherkinglee/RocA/blob/main/scripts/DESeq2.R)
 
 ```
 setwd("../data")
@@ -583,7 +583,7 @@ PlotMetageneAnalysis -i $results/MA_RocA03_down_unnormed_dataframe.txt -o $resul
 ###**Figure 2A-B**
 Disome-seq data analysis was finished by previous snakemake pipeline.
 
-+  [configure file](https://github.com/sherkinglee/RocA/metadata/Disome_configure.txt)
++  [configure file](https://github.com/sherkinglee/RocA/blob/main/metadata/Disome_configure.txt)
 
 ```
 bamFiles	readLengths	Offsets	bamLegends
@@ -618,7 +618,7 @@ PlotMetageneAnalysis -i $results/MA_RocA03_RDG_unnormed_dataframe.txt -o $result
 
 ###**Figure 2C**
 
-+ Calculate disome density of the first 50 codons via [ReadsLengthOfSpecificRegions.py](https://github.com/sherkinglee/RocA/scripts/ReadsLengthOfSpecificRegions.py)
++ Calculate disome density of the first 50 codons via [ReadsLengthOfSpecificRegions.py](https://github.com/sherkinglee/RocA/blob/main/scripts/ReadsLengthOfSpecificRegions.py)
 
 ```
 workdir=`pwd`
@@ -672,7 +672,7 @@ PlotTransCoverage -i coverage/MA_RUG_293FT-RocA03_RPM_depth.txt -o coverage/293F
 
 ###**Figure 3A**
 
-+ Get gene sets for GO analysis: [GO_analysis.txt](https://github.com/sherkinglee/RocA/data/GO_analysis.txt)
++ Get gene sets for GO analysis: [GO_analysis.txt](https://github.com/sherkinglee/RocA/blob/main/data/GO_analysis.txt)
 
 ```
 $ less -S GO_analysis.txt
@@ -695,7 +695,7 @@ HIST1H2AH       CTNNB1
 NUP205  YWHAE
 ```
 
-+ Codes: [GO_analysis.R](https://github.com/sherkinglee/RocA/scripts/GO_analysis.R)
++ Codes: [GO_analysis.R](https://github.com/sherkinglee/RocA/blob/main/scripts/GO_analysis.R)
 
 ```
 setwd("../data")
@@ -823,7 +823,7 @@ A	C	G	T
 0.149	0.155	0.218	0.477
 ```
 
-+ Select one polypurine motif in CDS of RUGs for plot via [Seq2logo.R](https://github.com/sherkinglee/RocA/scripts/Seq2logo.R)
++ Select one polypurine motif in CDS of RUGs for plot via [Seq2logo.R](https://github.com/sherkinglee/RocA/blob/main/scripts/Seq2logo.R)
 
 ```
 setwd("../data")
@@ -866,7 +866,7 @@ bsub -q TEST-A -n 4 -e 643_down.err -o 643_down.out "blastn -subject 643_down_5U
 bsub -q TEST-A -n 4 -e 643_down.err -o 643_down.out "blastn -subject 643_down_5UTR.fa -query ../05.contam/noncontam_SRR3238814.fa -task blastn  -outfmt \"7 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue\" -out DMSO1_to_RocA03_down_5UTR.txt"
 ```
 
-+ Searching polyAG motifs via [SearchPolypurineMotifs.py](https://github.com/sherkinglee/RocA/scripts/SearchPolypurineMotifs.py)
++ Searching polyAG motifs via [SearchPolypurineMotifs.py](https://github.com/sherkinglee/RocA/blob/main/scripts/SearchPolypurineMotifs.py)
 
 ```
 python SearchPolypurineMotifs.py -i DMSO1_to_RocA03_up_CDS_reads.fa -o DMSO1_to_RocA03_up_CDS_reads --kmer 4 --base AG
@@ -953,7 +953,7 @@ less -S DMSO2_to_RocA03_up_CDS_reads_polyAG_6_mer.txt|cut -f 3|sort |uniq -c |aw
 
 ```
 
-+ Calculate motif score via [PolypurineMotifScore.py](https://github.com/sherkinglee/RocA/scripts/PolypurineMotifScore.py)
++ Calculate motif score via [PolypurineMotifScore.py](https://github.com/sherkinglee/RocA/blob/main/scripts/PolypurineMotifScore.py)
 
 ```
 # statistic motif score
@@ -1007,7 +1007,7 @@ python PolypurineMotifScore.py -i ../05.contam/noncontam_SRR3238818.fa -m RocA3_
 
 ###**Figure 4C**
 
-+ Calculate density around poly-purine motifs via [RiboDensityAroundPolyPurineMotifs.py](https://github.com/sherkinglee/RocA/scripts/RiboDensityAroundPolyPurineMotifs.py)
++ Calculate density around poly-purine motifs via [RiboDensityAroundPolyPurineMotifs.py](https://github.com/sherkinglee/RocA/blob/main/scripts/RiboDensityAroundPolyPurineMotifs.py)
 
 ```
 workdir=`pwd`
