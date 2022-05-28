@@ -49,7 +49,7 @@ done
 ----
 
 ## **Preparations**
-The human reference genome, ncRNA and annotations are downloaded from [Ensemble Genome Browser (release 88)](http://www/ensemble.org). Human rRNA sequences are downloaded from [UCSC Genome Browser](https://genome.ucsc.edu/) and download method could refer to [this protocol](https://www.jove.com/t/63366/de-novo-identification-actively-translated-open-reading-frames-with).
+The human reference genome, ncRNA and annotations are downloaded from [Ensemble Genome Browser (release 88)](https://asia.ensembl.org/index.html). Human rRNA sequences are downloaded from [UCSC Genome Browser](https://genome.ucsc.edu/) and download method could refer to [this protocol](https://www.jove.com/t/63366/de-novo-identification-actively-translated-open-reading-frames-with).
 
 + Download and install some tools and packages
 
@@ -218,7 +218,7 @@ RiboDensityAtEachPosition -c $trans_info -f $attribute -o $workdir/coverage/MA  
 
 ## **Re-generation of the results presented in the manuscript**
 
-###**Figure 1A**
+### **Figure 1A**
 
 + all used data were deposited in [./data](https://github.com/sherkinglee/RocA/blob/main/data/)
 
@@ -229,7 +229,7 @@ total_merged_diff_polarity_202102.txt
 total_merged_read_coverage_202102.txt
 ```
 
-+ clustering analyses via [RiboPipe.py](https://github.com/sherkinglee/RocA/script/RiboPipe.py)
++ clustering analyses via [RiboPipe.py](https://github.com/sherkinglee/RocA/blob/main/script/RiboPipe.py)
 
 ```
 #!/usr/bin/env python
@@ -297,7 +297,8 @@ plt.savefig("../results/Figure 1A.pdf")
 
 <center>![image_1g44efhhh1dc21qhi1heo16dbhim9.png-187.5kB][1]</center>
 
-###**Figure 1B**
+
+### **Figure 1B**
 
 + set [configure](https://github.com/sherkinglee/RocA/blob/main/metadata/GSE70211_configure.txt) file
 
@@ -330,10 +331,12 @@ MetageneAnalysis -f $attribute -c $trans_info -o $results/MA -U codon -M RPKM -u
 PlotMetageneAnalysis -i $results/MA_unnormed_dataframe.txt -o $results/MA_unnormed -g $groups -r $replicates -u 100 -d 400 --mode mean
 ```
 
+
 <center>![image_1g44f9obfic6l90pvp86nntm.png-93.6kB][2]</center>
 
 
-###**Figure 1C**
+
+### **Figure 1C**
 
 + Calculate codon density for each sample
 
@@ -448,7 +451,8 @@ graph2ppt(x=pp,"../results/Figure 1C.ppt")
 
 <center>![image_1g44fv5tb13vplc61kcunbb17t513.png-20.8kB][3]</center>
 
-###**Figure 1D**
+
+### **Figure 1D**
 
 + DE analysis via [DEseq2.R](https://github.com/sherkinglee/RocA/blob/main/scripts/DESeq2.R)
 
@@ -555,7 +559,8 @@ p
 
 <center>![image_1g44i5vv811ek1p3a136ag0hl0a1g.png-37.4kB][4]</center>
 
-###**Figure 1E-F**
+
+### **Figure 1E-F**
 
 + Metagene analysis via [RiboMiner](https://github.com/xryanglab/RiboMiner)
 
@@ -580,7 +585,8 @@ PlotMetageneAnalysis -i $results/MA_RocA03_down_unnormed_dataframe.txt -o $resul
 
 <center>![image_1g44irmrt1sio14nhj1q1haodpm1t.png-186.9kB][5]</center>
 
-###**Figure 2A-B**
+
+### **Figure 2A-B**
 Disome-seq data analysis was finished by previous snakemake pipeline.
 
 +  [configure file](https://github.com/sherkinglee/RocA/blob/main/metadata/Disome_configure.txt)
@@ -616,7 +622,8 @@ PlotMetageneAnalysis -i $results/MA_RocA03_RDG_unnormed_dataframe.txt -o $result
 
 <center>![image_1g44jeg5q1oju3vqtts1npcl262a.png-122.6kB][6]</center>
 
-###**Figure 2C**
+
+### **Figure 2C**
 
 + Calculate disome density of the first 50 codons via [ReadsLengthOfSpecificRegions.py](https://github.com/sherkinglee/RocA/blob/main/scripts/ReadsLengthOfSpecificRegions.py)
 
@@ -647,7 +654,7 @@ python ReadsLengthOfSpecificRegions.py -i $BamDir/293FT-RocA03-disome-2_STAR/293
 <center>![image_1g44k9cdl1dl819j2v2r1hadfdq2n.png-53.8kB][7]</center>
 
 
-###**Figure 2D**
+### **Figure 2D**
 
 + Calculate read coverage for each transcript via [RiboMiner](https://github.com/xryanglab/RiboMiner)
 
@@ -670,7 +677,8 @@ PlotTransCoverage -i coverage/MA_RUG_293FT-RocA03_RPM_depth.txt -o coverage/293F
 
 <center>![image_1g44kgm1a7gh1i2ot436b8ulu3h.png-33.1kB][8]</center>
 
-###**Figure 3A**
+
+### **Figure 3A**
 
 + Get gene sets for GO analysis: [GO_analysis.txt](https://github.com/sherkinglee/RocA/blob/main/data/GO_analysis.txt)
 
@@ -735,12 +743,14 @@ write.table(formula_dataframe,"GO_analysis_dataframe.txt",quote = F,sep="\t",row
 
 <center>![image_1g44ksog5abl1i21hu3rvg1s0k3u.png-166.7kB][9]</center>
 
+
 regenated in Excel:
+
 
 <center>![image_1g44l5r4q1gg41rfp132uherkp54b.png-263.2kB][10]</center>
 
 
-###**Figure 3B-E**
+### **Figure 3B-E**
 
 + Fetch cds sequences for RUGs and RDGs via [RiboMiner](https://github.com/xryanglab/RiboMiner)
 
@@ -800,7 +810,8 @@ PlotHydropathyCharge -i Charge_values_dataframe.txt -o Charge -u 0 -d 100 --mode
 
 <center>![image_1g44lpfvcm311tnmr31gie1ql74o.png-297.9kB][11]</center>
 
-###**Figure 4A**
+
+### **Figure 4A**
 
 + Motif identification via homer
 
@@ -833,10 +844,10 @@ up_motif3 <- t(up_motif3)
 seqLogo(up_motif3,ic.scale = F)
 ```
 
-![image_1g44m2fnq7g47dv2iks261aqo55.png-69.4kB][12]
+<center>![image_1g44m2fnq7g47dv2iks261aqo55.png-69.4kB][12]</center>
 
 
-###**Figure 4B**
+### **Figure 4B**
 
 + blast iCLIP-seq reads to CDS of RUGs
 
@@ -1005,7 +1016,7 @@ python PolypurineMotifScore.py -i ../05.contam/noncontam_SRR3238818.fa -m RocA3_
 
 <center>![image_1g44nofoj76v17t97ns1al21r4f5i.png-78.8kB][13]</center>
 
-###**Figure 4C**
+### **Figure 4C**
 
 + Calculate density around poly-purine motifs via [RiboDensityAroundPolyPurineMotifs.py](https://github.com/sherkinglee/RocA/blob/main/scripts/RiboDensityAroundPolyPurineMotifs.py)
 
@@ -1241,7 +1252,8 @@ python PlotRatio.py -i  counts_10_mean_kmer/hek293t_UTR_RocA-3_polyAG_6_mer.rati
 
 <center>![image_1g44obtre17nq2j01o7s1ncf1ke45v.png-120.1kB][14]</center>
 
-###**Figure 4D**
+
+### **Figure 4D**
 
 + Calculate disome density around polypurine moitfs
 
@@ -1330,7 +1342,8 @@ python PlotRatio.py -i  counts_10/test_CDS_293FT_RocA03_polyAG_6_mer.ratio,count
 
 <center>![image_1g44omlubf5610fs1knmkv417g16c.png-148.3kB][15]</center>
 
-###**Figure 4E**
+
+### **Figure 4E**
 
 + Metagene analysis via RiboMiner
 
@@ -1357,7 +1370,7 @@ PlotMetageneAnalysis -i $results/MA_RocA03_down_unnormed_dataframe.txt -o $resul
 <center>![image_1g44p5goovo911derh415lcal36p.png-105kB][16]</center>
 
 
-###**Figure 6A**
+### **Figure 6A**
 
 + configure files for 4 tumor cell samples
 
@@ -1478,14 +1491,14 @@ PlotMetageneAnalysis -i $results/MA_1650_RocA03-up_unnormed_dataframe.txt -o $re
 
 <center>![image_1g44pvbssen11tmkndn1m7o92o76.png-354.6kB][17]</center>
 
-###**Figure 6B**
+### **Figure 6B**
 
 The methods are the same as that for Figure 4C and Figure 4D
 
 <center>![image_1g44qabav17b118an13orkjb1kqo7j.png-422.3kB][18]</center>
 
 
-###**Figure 7**
+### **Figure 7**
 
 <center>![image_1g44qd4e51ker7c43k1sfm10i080.png-126.2kB][19]</center>
 
