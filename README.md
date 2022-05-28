@@ -295,7 +295,7 @@ ax.cax.set_visible(False)
 plt.savefig("../results/Figure 1A.pdf")
 ```
 
-<center>![image_1g44efhhh1dc21qhi1heo16dbhim9.png-187.5kB][1]</center>
+![image_1g44efhhh1dc21qhi1heo16dbhim9.png-187.5kB][1]
 
 
 ### **Figure 1B**
@@ -332,7 +332,7 @@ PlotMetageneAnalysis -i $results/MA_unnormed_dataframe.txt -o $results/MA_unnorm
 ```
 
 
-<center>![image_1g44f9obfic6l90pvp86nntm.png-93.6kB][2]</center>
+ ![image_1g44f9obfic6l90pvp86nntm.png-93.6kB][2]  
 
 
 
@@ -449,7 +449,7 @@ pp
 graph2ppt(x=pp,"../results/Figure 1C.ppt")
 ```
 
-<center>![image_1g44fv5tb13vplc61kcunbb17t513.png-20.8kB][3]</center>
+ ![image_1g44fv5tb13vplc61kcunbb17t513.png-20.8kB][3]  
 
 
 ### **Figure 1D**
@@ -557,7 +557,7 @@ p <- p +theme(axis.text=element_text(size=20),axis.title=element_text(size=20))
 p
 ```
 
-<center>![image_1g44i5vv811ek1p3a136ag0hl0a1g.png-37.4kB][4]</center>
+ ![image_1g44i5vv811ek1p3a136ag0hl0a1g.png-37.4kB][4]  
 
 
 ### **Figure 1E-F**
@@ -583,7 +583,7 @@ PlotMetageneAnalysis -i $results/MA_RocA03_up_unnormed_dataframe.txt -o $results
 PlotMetageneAnalysis -i $results/MA_RocA03_down_unnormed_dataframe.txt -o $results/MA_RocA03_down_unnormed -g $groups -r $replicates -u 100 -d 400 --mode mean
 ```
 
-<center>![image_1g44irmrt1sio14nhj1q1haodpm1t.png-186.9kB][5]</center>
+ ![image_1g44irmrt1sio14nhj1q1haodpm1t.png-186.9kB][5]  
 
 
 ### **Figure 2A-B**
@@ -620,7 +620,7 @@ PlotMetageneAnalysis -i $results/MA_RocA03_RDG_unnormed_dataframe.txt -o $result
 
 ```
 
-<center>![image_1g44jeg5q1oju3vqtts1npcl262a.png-122.6kB][6]</center>
+ ![image_1g44jeg5q1oju3vqtts1npcl262a.png-122.6kB][6]  
 
 
 ### **Figure 2C**
@@ -651,7 +651,7 @@ python ReadsLengthOfSpecificRegions.py -i $BamDir/293FT-RocA03-disome-2_STAR/293
 ## plot in MicroSoft Excell
 ```
 
-<center>![image_1g44k9cdl1dl819j2v2r1hadfdq2n.png-53.8kB][7]</center>
+ ![image_1g44k9cdl1dl819j2v2r1hadfdq2n.png-53.8kB][7]  
 
 
 ### **Figure 2D**
@@ -675,7 +675,7 @@ PlotTransCoverage -i coverage/MA_RUG_293FT-DMSO_RPM_depth.txt -o coverage/293FT_
 PlotTransCoverage -i coverage/MA_RUG_293FT-RocA03_RPM_depth.txt -o coverage/293FT_RocA03_NDUFS6 -c $trans_info -t NDUFS6  --mode coverage --id-type gene_name --color lightskyblue --type single-gene --ymax 30
 ```
 
-<center>![image_1g44kgm1a7gh1i2ot436b8ulu3h.png-33.1kB][8]</center>
+ ![image_1g44kgm1a7gh1i2ot436b8ulu3h.png-33.1kB][8]  
 
 
 ### **Figure 3A**
@@ -741,13 +741,13 @@ formula_dataframe <- as.data.frame(formula)
 write.table(formula_dataframe,"GO_analysis_dataframe.txt",quote = F,sep="\t",row.names = F,col.names = T)
 ```
 
-<center>![image_1g44ksog5abl1i21hu3rvg1s0k3u.png-166.7kB][9]</center>
+ ![image_1g44ksog5abl1i21hu3rvg1s0k3u.png-166.7kB][9]  
 
 
 regenated in Excel:
 
 
-<center>![image_1g44l5r4q1gg41rfp132uherkp54b.png-263.2kB][10]</center>
+ ![image_1g44l5r4q1gg41rfp132uherkp54b.png-263.2kB][10]  
 
 
 ### **Figure 3B-E**
@@ -808,7 +808,7 @@ PlotHydropathyCharge -i Hydro_values_dataframe.txt -o Hydro -u 0 -d 100 --mode a
 PlotHydropathyCharge -i Charge_values_dataframe.txt -o Charge -u 0 -d 100 --mode all --ylab "Average Charges"
 ```
 
-<center>![image_1g44lpfvcm311tnmr31gie1ql74o.png-297.9kB][11]</center>
+ ![image_1g44lpfvcm311tnmr31gie1ql74o.png-297.9kB][11]  
 
 
 ### **Figure 4A**
@@ -844,7 +844,7 @@ up_motif3 <- t(up_motif3)
 seqLogo(up_motif3,ic.scale = F)
 ```
 
-<center>![image_1g44m2fnq7g47dv2iks261aqo55.png-69.4kB][12]</center>
+ ![image_1g44m2fnq7g47dv2iks261aqo55.png-69.4kB][12]  
 
 
 ### **Figure 4B**
@@ -1014,7 +1014,7 @@ python PolypurineMotifScore.py -i ../05.contam/noncontam_SRR3238818.fa -m RocA3_
 ./results/Figure 4B.xlsx
 ```
 
-<center>![image_1g44nofoj76v17t97ns1al21r4f5i.png-78.8kB][13]</center>
+ ![image_1g44nofoj76v17t97ns1al21r4f5i.png-78.8kB][13]  
 
 ### **Figure 4C**
 
@@ -1250,7 +1250,7 @@ python PlotRatio.py -i  counts_10_mean_kmer/hek293t_UTR_RocA-03_polyAG_6_mer.rat
 python PlotRatio.py -i  counts_10_mean_kmer/hek293t_UTR_RocA-3_polyAG_6_mer.ratio,counts_10_mean_kmer/hek293t_UTR_RocA-3_polyCT_6_mer.ratio -o counts_10_mean_kmer/RocA3_UTR_6_mer_AG_CT -t RocA3-AG,RocA3-CT -u 50 -d 50  --slide-window
 ```
 
-<center>![image_1g44obtre17nq2j01o7s1ncf1ke45v.png-120.1kB][14]</center>
+ ![image_1g44obtre17nq2j01o7s1ncf1ke45v.png-120.1kB][14]  
 
 
 ### **Figure 4D**
@@ -1340,7 +1340,7 @@ python PlotRatio.py -i  counts_10/test_CDS_293FT_RocA03_polyAG_6_mer.ratio,count
 python PlotRatio.py -i  counts_10/test_CDS_293FT_RocA03_polyAG_6_mer.ratio,counts_10/test_CDS_293FT_RocA03_polyCT_6_mer.ratio -o counts_10/test_CDS_293FT_6mer_AG_CT -t RocA03-AG,RocA03-CT -u 100 -d 100  --slide-window
 ```
 
-<center>![image_1g44omlubf5610fs1knmkv417g16c.png-148.3kB][15]</center>
+ ![image_1g44omlubf5610fs1knmkv417g16c.png-148.3kB][15]  
 
 
 ### **Figure 4E**
@@ -1367,7 +1367,7 @@ PlotMetageneAnalysis -i $results/MA_RocA03_up_unnormed_dataframe.txt -o $results
 PlotMetageneAnalysis -i $results/MA_RocA03_down_unnormed_dataframe.txt -o $results/MA_RocA03_down_unnormed -g $groups -r $replicates -u 100 -d 400 --mode mean
 ```
 
-<center>![image_1g44p5goovo911derh415lcal36p.png-105kB][16]</center>
+ ![image_1g44p5goovo911derh415lcal36p.png-105kB][16]  
 
 
 ### **Figure 6A**
@@ -1489,18 +1489,18 @@ PlotMetageneAnalysis -i $results/MA_1650_RocA03-up_unnormed_dataframe.txt -o $re
 
 ```
 
-<center>![image_1g44pvbssen11tmkndn1m7o92o76.png-354.6kB][17]</center>
+ ![image_1g44pvbssen11tmkndn1m7o92o76.png-354.6kB][17]  
 
 ### **Figure 6B**
 
 The methods are the same as that for Figure 4C and Figure 4D
 
-<center>![image_1g44qabav17b118an13orkjb1kqo7j.png-422.3kB][18]</center>
+ ![image_1g44qabav17b118an13orkjb1kqo7j.png-422.3kB][18]  
 
 
 ### **Figure 7**
 
-<center>![image_1g44qd4e51ker7c43k1sfm10i080.png-126.2kB][19]</center>
+ ![image_1g44qd4e51ker7c43k1sfm10i080.png-126.2kB][19]  
 
 
   [1]: http://static.zybuluo.com/sherking/d63qt5r9rjosqwacm9rbbn1w/image_1g44efhhh1dc21qhi1heo16dbhim9.png
