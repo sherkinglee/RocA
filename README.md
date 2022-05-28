@@ -14,7 +14,7 @@ Corresponding： yangxuerui@tsinghua.edu.cn; lfj17@mails.tsinghua.edu.cn; sherki
 
 ## **Introduction**
 
-This file is a description of how the results presented in the manuscript were generated, including the datasets we used, how we downloaded and processed the raw datasets, the codes we used, et al.
+This file is a description of how the results presented in the manuscript were generated, including the datasets we used, how we downloaded and processed the raw datasets, the codes we used, et al. All scripts used for processing BAM files should be excuted in Linux platform and other scripts can be both used in Linux and windows platform. It should be noted that most of the analyses were based on [RiboMiner](https://github.com/xryanglab/RiboMiner) we developed before.
 
 ## **Datasets**
 The datasets we used were all downloaded from [GEO](https://www.ncbi.nlm.nih.gov/gds) database. We all collected 26 datasets, containing more than 100 ribosome profiling samples and several iCLIP-seq samples. Please refer to [Table S1](https://github.com/sherkinglee/RocA/blob/main/metadata/TableS1.xlsx) for the detailed information of all the collected datasets.
@@ -93,6 +93,9 @@ snakemake -s Ribo-seq-snakemake.py  --cluster "sbatch -p cmp -N 2 -n 8 -e Ribo.e
 
 
 ## **Formal analyses**
+
+Before doing the following analyses, all datasets we collected should be processed with the [Ribo-seq-pipeline](https://github.com/sherkinglee/RocA/blob/main/scripts/Ribo-seq-snakemake.py).
+
 ### **Calculate polarity scores for each datasets**
 + Set configure files ([GSE102720](https://github.com/sherkinglee/RocA/blob/main/metadata/GSE102720_configure.txt) for example)
 
