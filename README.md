@@ -8,7 +8,7 @@
 <sup>4</sup> These authors are main contributors to this work.
 
 
-Corresponding： yangxuerui@tsinghua.edu.cn; lfj17@mails.tsinghua.edu.cn; sherkinglee@gmail.com
+Corresponding： yangxuerui@tsinghua.edu.cn; lfj17@tsinghua.org.cn; sherkinglee@gmail.com
 
 ---
 
@@ -589,7 +589,7 @@ PlotMetageneAnalysis -i $results/MA_RocA03_down_unnormed_dataframe.txt -o $resul
  ![image_1g44irmrt1sio14nhj1q1haodpm1t.png-186.9kB][5]  
 
 
-### **Figure 2A-B**
+### **Figure 2A**
 Disome-seq data analysis was finished by previous snakemake pipeline.
 
 +  [configure file](https://github.com/sherkinglee/RocA/blob/main/metadata/Disome_configure.txt)
@@ -623,10 +623,11 @@ PlotMetageneAnalysis -i $results/MA_RocA03_RDG_unnormed_dataframe.txt -o $result
 
 ```
 
- ![image_1g44jeg5q1oju3vqtts1npcl262a.png-122.6kB][6]  
+ ![image_1g44jeg5q1oju3vqtts1npcl262a.png-122.6kB][6] 
+ <center> ![image_1gi7qmofj112o1oupqcsoa13941g.png-31.1kB][7] </center>
 
 
-### **Figure 2C**
+### **Figure 2B**
 
 + Calculate disome density of the first 50 codons via [ReadsLengthOfSpecificRegions.py](https://github.com/sherkinglee/RocA/blob/main/scripts/ReadsLengthOfSpecificRegions.py)
 
@@ -654,10 +655,10 @@ python ReadsLengthOfSpecificRegions.py -i $BamDir/293FT-RocA03-disome-2_STAR/293
 ## plot in MicroSoft Excell
 ```
 
- ![image_1g44k9cdl1dl819j2v2r1hadfdq2n.png-53.8kB][7]  
+ <center> ![image_1gi7qntciimnh9m15ea1si31mjd1t.png-45.1kB][8]  </center>
 
 
-### **Figure 2D**
+### **Figure 2C-D**
 
 + Calculate read coverage for each transcript via [RiboMiner](https://github.com/xryanglab/RiboMiner)
 
@@ -678,7 +679,7 @@ PlotTransCoverage -i coverage/MA_RUG_293FT-DMSO_RPM_depth.txt -o coverage/293FT_
 PlotTransCoverage -i coverage/MA_RUG_293FT-RocA03_RPM_depth.txt -o coverage/293FT_RocA03_NDUFS6 -c $trans_info -t NDUFS6  --mode coverage --id-type gene_name --color lightskyblue --type single-gene --ymax 30
 ```
 
- ![image_1g44kgm1a7gh1i2ot436b8ulu3h.png-33.1kB][8]  
+<center> ![image_1gi7qclo7hjn1s8j8fqdtvdram.png-20.2kB][9] </center>
 
 
 ### **Figure 3A**
@@ -744,13 +745,13 @@ formula_dataframe <- as.data.frame(formula)
 write.table(formula_dataframe,"GO_analysis_dataframe.txt",quote = F,sep="\t",row.names = F,col.names = T)
 ```
 
- ![image_1g44ksog5abl1i21hu3rvg1s0k3u.png-166.7kB][9]  
+ ![image_1g44ksog5abl1i21hu3rvg1s0k3u.png-166.7kB][10]  
 
 
 regenated in Excel:
 
 
- ![image_1g44l5r4q1gg41rfp132uherkp54b.png-263.2kB][10]  
+ ![image_1gi7qp62q16psfj5160q1jm316gg2a.png-51.1kB][11]
 
 
 ### **Figure 3B-E**
@@ -811,7 +812,7 @@ PlotHydropathyCharge -i Hydro_values_dataframe.txt -o Hydro -u 0 -d 100 --mode a
 PlotHydropathyCharge -i Charge_values_dataframe.txt -o Charge -u 0 -d 100 --mode all --ylab "Average Charges"
 ```
 
- ![image_1g44lpfvcm311tnmr31gie1ql74o.png-297.9kB][11]  
+ ![image_1gi7qq5hm1ktkvon8101c5nbo2n.png-133.8kB][12] 
 
 
 ### **Figure 4A**
@@ -847,7 +848,7 @@ up_motif3 <- t(up_motif3)
 seqLogo(up_motif3,ic.scale = F)
 ```
 
- ![image_1g44m2fnq7g47dv2iks261aqo55.png-69.4kB][12]  
+ ![image_1g44m2fnq7g47dv2iks261aqo55.png-69.4kB][13]  
 
 
 ### **Figure 4B**
@@ -1017,7 +1018,7 @@ python PolypurineMotifScore.py -i ../05.contam/noncontam_SRR3238818.fa -m RocA3_
 ./results/Figure 4B.xlsx
 ```
 
- ![image_1g44nofoj76v17t97ns1al21r4f5i.png-78.8kB][13]  
+ ![image_1g44nofoj76v17t97ns1al21r4f5i.png-78.8kB][14]  
 
 ### **Figure 4C**
 
@@ -1253,7 +1254,7 @@ python PlotRatio.py -i  counts_10_mean_kmer/hek293t_UTR_RocA-03_polyAG_6_mer.rat
 python PlotRatio.py -i  counts_10_mean_kmer/hek293t_UTR_RocA-3_polyAG_6_mer.ratio,counts_10_mean_kmer/hek293t_UTR_RocA-3_polyCT_6_mer.ratio -o counts_10_mean_kmer/RocA3_UTR_6_mer_AG_CT -t RocA3-AG,RocA3-CT -u 50 -d 50  --slide-window
 ```
 
- ![image_1g44obtre17nq2j01o7s1ncf1ke45v.png-120.1kB][14]  
+![image_1gi7qup88bv79if5a13b03vg34.png-220.9kB][15]
 
 
 ### **Figure 4D**
@@ -1343,7 +1344,7 @@ python PlotRatio.py -i  counts_10/test_CDS_293FT_RocA03_polyAG_6_mer.ratio,count
 python PlotRatio.py -i  counts_10/test_CDS_293FT_RocA03_polyAG_6_mer.ratio,counts_10/test_CDS_293FT_RocA03_polyCT_6_mer.ratio -o counts_10/test_CDS_293FT_6mer_AG_CT -t RocA03-AG,RocA03-CT -u 100 -d 100  --slide-window
 ```
 
- ![image_1g44omlubf5610fs1knmkv417g16c.png-148.3kB][15]  
+ ![image_1g44omlubf5610fs1knmkv417g16c.png-148.3kB][16]  
 
 
 ### **Figure 4E**
@@ -1370,7 +1371,15 @@ PlotMetageneAnalysis -i $results/MA_RocA03_up_unnormed_dataframe.txt -o $results
 PlotMetageneAnalysis -i $results/MA_RocA03_down_unnormed_dataframe.txt -o $results/MA_RocA03_down_unnormed -g $groups -r $replicates -u 100 -d 400 --mode mean
 ```
 
- ![image_1g44p5goovo911derh415lcal36p.png-105kB][16]  
+<center> ![image_1g44p5goovo911derh415lcal36p.png-105kB][17]  </center>
+
+### **Figure 4F**
+
+This is similar to Figure 4C and Figure 4D
+
+<center> ![image_1gi7r35vbsqju0t1ahfodb1q2b3h.png-55.7kB][18] </center>
+
+
 
 
 ### **Figure 6A**
@@ -1492,18 +1501,24 @@ PlotMetageneAnalysis -i $results/MA_1650_RocA03-up_unnormed_dataframe.txt -o $re
 
 ```
 
- ![image_1g44pvbssen11tmkndn1m7o92o76.png-354.6kB][17]  
+ ![image_1g44pvbssen11tmkndn1m7o92o76.png-354.6kB][19]  
 
 ### **Figure 6B**
 
 The methods are the same as that for Figure 4C and Figure 4D
 
- ![image_1g44qabav17b118an13orkjb1kqo7j.png-422.3kB][18]  
+<center> ![image_1gi7r8sbo133o191d1vvq1j83th33u.png-271.6kB][20] </center>
 
 
-### **Figure 7**
+### **Figure 7: the model of translation regulation of RocA**
 
- ![image_1g44qd4e51ker7c43k1sfm10i080.png-126.2kB][19]  
+RDGs=IRGs
+RUGs=ERGs
+
+<center> ![image_1g44qd4e51ker7c43k1sfm10i080.png-126.2kB][21]   </center>
+
+
+
 
 
   [1]: http://static.zybuluo.com/sherking/d63qt5r9rjosqwacm9rbbn1w/image_1g44efhhh1dc21qhi1heo16dbhim9.png
@@ -1512,16 +1527,18 @@ The methods are the same as that for Figure 4C and Figure 4D
   [4]: http://static.zybuluo.com/sherking/jwwe2zyr2fck92zlw4brimyo/image_1g44i5vv811ek1p3a136ag0hl0a1g.png
   [5]: http://static.zybuluo.com/sherking/z65cx8gjqlqniugefxx01twu/image_1g44irmrt1sio14nhj1q1haodpm1t.png
   [6]: http://static.zybuluo.com/sherking/iq56rg6ivlyic8eezpkpnwv5/image_1g44jeg5q1oju3vqtts1npcl262a.png
-  [7]: http://static.zybuluo.com/sherking/7kz30yc469qwggwf9ti127m1/image_1g44k9cdl1dl819j2v2r1hadfdq2n.png
-  [8]: http://static.zybuluo.com/sherking/8e4f7f1ywd048qmdj5bqcyuw/image_1g44kgm1a7gh1i2ot436b8ulu3h.png
-  [9]: http://static.zybuluo.com/sherking/2iyzyh05aw64m7d3uectzc92/image_1g44ksog5abl1i21hu3rvg1s0k3u.png
-  [10]: http://static.zybuluo.com/sherking/fjvjzex6thmisjn4ja7y0q6d/image_1g44l5r4q1gg41rfp132uherkp54b.png
-  [11]: http://static.zybuluo.com/sherking/0g4iogamq22sezl9sdmgzy14/image_1g44lpfvcm311tnmr31gie1ql74o.png
-  [12]: http://static.zybuluo.com/sherking/ljqce3okk9uprvmw306ia8nj/image_1g44m2fnq7g47dv2iks261aqo55.png
-  [13]: http://static.zybuluo.com/sherking/65ucwm54aciph7fe1utmhkb3/image_1g44nofoj76v17t97ns1al21r4f5i.png
-  [14]: http://static.zybuluo.com/sherking/5zhppgkz9d6s9ivbudsrow1r/image_1g44obtre17nq2j01o7s1ncf1ke45v.png
-  [15]: http://static.zybuluo.com/sherking/cqq7ezg8ekkqfytrdgj9hma8/image_1g44omlubf5610fs1knmkv417g16c.png
-  [16]: http://static.zybuluo.com/sherking/usiokgh8lfv91rhltgdop7kc/image_1g44p5goovo911derh415lcal36p.png
-  [17]: http://static.zybuluo.com/sherking/n01o92qp7ovfi19zzbdnv3fl/image_1g44pvbssen11tmkndn1m7o92o76.png
-  [18]: http://static.zybuluo.com/sherking/vyeiq3bz5gget05jtx7x9gbr/image_1g44qabav17b118an13orkjb1kqo7j.png
-  [19]: http://static.zybuluo.com/sherking/wz08wla0gezxleiqqnt2xq0c/image_1g44qd4e51ker7c43k1sfm10i080.png
+  [7]: http://static.zybuluo.com/sherking/pgyd908apmrtvo3r070j276c/image_1gi7qmofj112o1oupqcsoa13941g.png
+  [8]: http://static.zybuluo.com/sherking/7qnhsc5ptw122g0a885vzamk/image_1gi7qntciimnh9m15ea1si31mjd1t.png
+  [9]: http://static.zybuluo.com/sherking/xwvpk8icxsn1fdxpxev0gymq/image_1gi7qclo7hjn1s8j8fqdtvdram.png
+  [10]: http://static.zybuluo.com/sherking/2iyzyh05aw64m7d3uectzc92/image_1g44ksog5abl1i21hu3rvg1s0k3u.png
+  [11]: http://static.zybuluo.com/sherking/b6zomnhmoxii00axdti3um2j/image_1gi7qp62q16psfj5160q1jm316gg2a.png
+  [12]: http://static.zybuluo.com/sherking/i446i3uas7h42l2mns788i93/image_1gi7qq5hm1ktkvon8101c5nbo2n.png
+  [13]: http://static.zybuluo.com/sherking/ljqce3okk9uprvmw306ia8nj/image_1g44m2fnq7g47dv2iks261aqo55.png
+  [14]: http://static.zybuluo.com/sherking/65ucwm54aciph7fe1utmhkb3/image_1g44nofoj76v17t97ns1al21r4f5i.png
+  [15]: http://static.zybuluo.com/sherking/2opxwads8v5m5ln2utri86cp/image_1gi7qup88bv79if5a13b03vg34.png
+  [16]: http://static.zybuluo.com/sherking/cqq7ezg8ekkqfytrdgj9hma8/image_1g44omlubf5610fs1knmkv417g16c.png
+  [17]: http://static.zybuluo.com/sherking/usiokgh8lfv91rhltgdop7kc/image_1g44p5goovo911derh415lcal36p.png
+  [18]: http://static.zybuluo.com/sherking/v6enrdbl2kvxxe4r5y53dj0n/image_1gi7r35vbsqju0t1ahfodb1q2b3h.png
+  [19]: http://static.zybuluo.com/sherking/n01o92qp7ovfi19zzbdnv3fl/image_1g44pvbssen11tmkndn1m7o92o76.png
+  [20]: http://static.zybuluo.com/sherking/ywzswq02wnxmgtzzxrgndb1f/image_1gi7r8sbo133o191d1vvq1j83th33u.png
+  [21]: http://static.zybuluo.com/sherking/wz08wla0gezxleiqqnt2xq0c/image_1g44qd4e51ker7c43k1sfm10i080.png
