@@ -335,7 +335,9 @@ PlotMetageneAnalysis -i $results/MA_unnormed_dataframe.txt -o $results/MA_unnorm
 ```
 
 
- ![image_1g44f9obfic6l90pvp86nntm.png-93.6kB][2]  
+![image_1g44f9obfic6l90pvp86nntm.png-93.6kB][2]
+ 
+ 
 
 
 
@@ -623,8 +625,9 @@ PlotMetageneAnalysis -i $results/MA_RocA03_RDG_unnormed_dataframe.txt -o $result
 
 ```
 
- ![image_1g44jeg5q1oju3vqtts1npcl262a.png-122.6kB][6] 
- <center> ![image_1gi7qmofj112o1oupqcsoa13941g.png-31.1kB][7] </center>
+![image_1g44jeg5q1oju3vqtts1npcl262a.png-122.6kB][6] 
+ 
+![image_1gi7qmofj112o1oupqcsoa13941g.png-31.1kB][7]
 
 
 ### **Figure 2B**
@@ -655,7 +658,7 @@ python ReadsLengthOfSpecificRegions.py -i $BamDir/293FT-RocA03-disome-2_STAR/293
 ## plot in MicroSoft Excell
 ```
 
- <center> ![image_1gi7qntciimnh9m15ea1si31mjd1t.png-45.1kB][8]  </center>
+![image_1gi7qntciimnh9m15ea1si31mjd1t.png-45.1kB][8]
 
 
 ### **Figure 2C-D**
@@ -679,7 +682,7 @@ PlotTransCoverage -i coverage/MA_RUG_293FT-DMSO_RPM_depth.txt -o coverage/293FT_
 PlotTransCoverage -i coverage/MA_RUG_293FT-RocA03_RPM_depth.txt -o coverage/293FT_RocA03_NDUFS6 -c $trans_info -t NDUFS6  --mode coverage --id-type gene_name --color lightskyblue --type single-gene --ymax 30
 ```
 
-<center> ![image_1gi7qclo7hjn1s8j8fqdtvdram.png-20.2kB][9] </center>
+![image_1gi7qclo7hjn1s8j8fqdtvdram.png-20.2kB][9]
 
 
 ### **Figure 3A**
@@ -1371,13 +1374,13 @@ PlotMetageneAnalysis -i $results/MA_RocA03_up_unnormed_dataframe.txt -o $results
 PlotMetageneAnalysis -i $results/MA_RocA03_down_unnormed_dataframe.txt -o $results/MA_RocA03_down_unnormed -g $groups -r $replicates -u 100 -d 400 --mode mean
 ```
 
-<center> ![image_1g44p5goovo911derh415lcal36p.png-105kB][17]  </center>
+![image_1g44p5goovo911derh415lcal36p.png-105kB][17]
 
 ### **Figure 4F**
 
 This is similar to Figure 4C and Figure 4D
 
-<center> ![image_1gi7r35vbsqju0t1ahfodb1q2b3h.png-55.7kB][18] </center>
+![image_1gi7r35vbsqju0t1ahfodb1q2b3h.png-55.7kB][18]
 
 
 
@@ -1507,7 +1510,7 @@ PlotMetageneAnalysis -i $results/MA_1650_RocA03-up_unnormed_dataframe.txt -o $re
 
 The methods are the same as that for Figure 4C and Figure 4D
 
-<center> ![image_1gi7r8sbo133o191d1vvq1j83th33u.png-271.6kB][20] </center>
+![image_1gi7r8sbo133o191d1vvq1j83th33u.png-271.6kB][20]
 
 
 ### **Figure 7: the model of translation regulation of RocA**
@@ -1515,7 +1518,7 @@ The methods are the same as that for Figure 4C and Figure 4D
 RDGs=IRGs
 RUGs=ERGs
 
-<center> ![image_1g44qd4e51ker7c43k1sfm10i080.png-126.2kB][21]   </center>
+![image_1g44qd4e51ker7c43k1sfm10i080.png-126.2kB][21]
 
 
 
