@@ -1380,7 +1380,7 @@ PlotMetageneAnalysis -i $results/MA_RocA03_down_unnormed_dataframe.txt -o $resul
 
 This is similar to Figure 4C and Figure 4D
 
-![image_1gi7r35vbsqju0t1ahfodb1q2b3h.png-55.7kB][18]
+![image_1gi7te0a413ed1vakfs81gh21i0l4b.png-74.2kB][18]
 
 
 
@@ -1521,9 +1521,6 @@ RUGs=ERGs
 ![image_1g44qd4e51ker7c43k1sfm10i080.png-126.2kB][21]
 
 
-
-
-
   [1]: http://static.zybuluo.com/sherking/d63qt5r9rjosqwacm9rbbn1w/image_1g44efhhh1dc21qhi1heo16dbhim9.png
   [2]: http://static.zybuluo.com/sherking/3moovmbrindxz1f5m600uncn/image_1g44f9obfic6l90pvp86nntm.png
   [3]: http://static.zybuluo.com/sherking/n0y81lkomzlnawrjrpyd069r/image_1g44fv5tb13vplc61kcunbb17t513.png
@@ -1541,7 +1538,7 @@ RUGs=ERGs
   [15]: http://static.zybuluo.com/sherking/2opxwads8v5m5ln2utri86cp/image_1gi7qup88bv79if5a13b03vg34.png
   [16]: http://static.zybuluo.com/sherking/cqq7ezg8ekkqfytrdgj9hma8/image_1g44omlubf5610fs1knmkv417g16c.png
   [17]: http://static.zybuluo.com/sherking/usiokgh8lfv91rhltgdop7kc/image_1g44p5goovo911derh415lcal36p.png
-  [18]: http://static.zybuluo.com/sherking/v6enrdbl2kvxxe4r5y53dj0n/image_1gi7r35vbsqju0t1ahfodb1q2b3h.png
+  [18]: http://static.zybuluo.com/sherking/4yixe01uvs432f5pq5cicqa6/image_1gi7te0a413ed1vakfs81gh21i0l4b.png
   [19]: http://static.zybuluo.com/sherking/n01o92qp7ovfi19zzbdnv3fl/image_1g44pvbssen11tmkndn1m7o92o76.png
   [20]: http://static.zybuluo.com/sherking/ywzswq02wnxmgtzzxrgndb1f/image_1gi7r8sbo133o191d1vvq1j83th33u.png
   [21]: http://static.zybuluo.com/sherking/wz08wla0gezxleiqqnt2xq0c/image_1g44qd4e51ker7c43k1sfm10i080.png
